@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizApp - Online Quiz Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-brain"></i>
+                <span>QuizApp</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#quizzes" class="nav-link">Quizzes</a>
+                <a href="#create" class="nav-link">Create Quiz</a>
+                <div class="nav-auth" id="nav-auth">
+                    <button class="btn btn-outline" id="login-btn">Login</button>
+                    <button class="btn btn-primary" id="register-btn">Register</button>
+                </div>
+                <div class="nav-user" id="nav-user" style="display: none;">
+                    <span class="user-name" id="user-name"></span>
+                    <button class="btn btn-outline" id="logout-btn">Logout</button>
+                </div>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <div class="hero">
+                <div class="hero-content">
+                    <h1>Welcome to QuizApp</h1>
+                    <p>Create, take, and share quizzes with ease. Test your knowledge and challenge others!</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary btn-large" id="start-quiz-btn">Start Taking Quizzes</button>
+                        <button class="btn btn-outline btn-large" id="create-quiz-btn">Create Your Own Quiz</button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <i class="fas fa-question-circle"></i>
+                </div>
+            </div>
+        </section>
