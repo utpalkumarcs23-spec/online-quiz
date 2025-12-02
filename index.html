@@ -55,3 +55,222 @@
                 </div>
             </div>
         </section>
+
+        <!-- Login Modal -->
+        <div class="modal" id="login-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Login</h2>
+                    <button class="close-btn" id="close-login">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form id="login-form">
+                        <div class="form-group">
+                            <label for="login-email">Email</label>
+                            <input type="email" id="login-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="login-password">Password</label>
+                            <input type="password" id="login-password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Login</button>
+                    </form>
+                    <div class="divider">
+                        <span>or</span>
+                    </div>
+                    <button class="btn btn-google" id="google-login">
+                        <i class="fab fa-google"></i>
+                        Login with Google
+                    </button>
+                    <div class="auth-links">
+                        <a href="#" id="forgot-password-link">Forgot Password?</a>
+                        <p>Don't have an account? <a href="#" id="show-register">Register here</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Register Modal -->
+        <div class="modal" id="register-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Register</h2>
+                    <button class="close-btn" id="close-register">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form id="register-form">
+                        <div class="form-group">
+                            <label for="register-name">Full Name</label>
+                            <input type="text" id="register-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="register-email">Email</label>
+                            <input type="email" id="register-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="register-password">Password</label>
+                            <input type="password" id="register-password" required minlength="6">
+                        </div>
+                        <div class="form-group">
+                            <label for="register-confirm">Confirm Password</label>
+                            <input type="password" id="register-confirm" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Register</button>
+                    </form>
+                    <div class="divider">
+                        <span>or</span>
+                    </div>
+                    <button class="btn btn-google" id="google-register">
+                        <i class="fab fa-google"></i>
+                        Register with Google
+                    </button>
+                    <div class="auth-links">
+                        <p>Already have an account? <a href="#" id="show-login">Login here</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Forgot Password Modal -->
+        <div class="modal" id="forgot-password-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Reset Password</h2>
+                    <button class="close-btn" id="close-forgot">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form id="forgot-password-form">
+                        <div class="form-group">
+                            <label for="forgot-email">Email</label>
+                            <input type="email" id="forgot-email" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Send Reset Email</button>
+                    </form>
+                    <div class="auth-links">
+                        <p>Remember your password? <a href="#" id="back-to-login">Login here</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quizzes Section -->
+        <section id="quizzes" class="section">
+            <div class="container">
+                <h2>Available Quizzes</h2>
+                <div class="quiz-grid" id="quiz-grid">
+                    <!-- Quizzes will be loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Create Quiz Section -->
+        <section id="create" class="section">
+            <div class="container">
+                <h2>Create New Quiz</h2>
+                <form id="create-quiz-form">
+                    <div class="form-group">
+                        <label for="quiz-title">Quiz Title</label>
+                        <input type="text" id="quiz-title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="quiz-description">Description</label>
+                        <textarea id="quiz-description" rows="3"></textarea>
+                    </div>
+                    <div id="questions-container">
+                        <!-- Questions will be added here -->
+                    </div>
+                    <button type="button" class="btn btn-outline" id="add-question">Add Question</button>
+                    <button type="submit" class="btn btn-primary">Create Quiz</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Quiz Taking Section -->
+        <section id="quiz-taking" class="section">
+            <div class="container">
+                <div class="quiz-header">
+                    <h2 id="quiz-taking-title">Quiz Title</h2>
+                    <div class="quiz-progress">
+                        <span id="current-question">1</span> of <span id="total-questions">5</span>
+                    </div>
+                </div>
+                <div class="quiz-content">
+                    <div class="question-card">
+                        <h3 id="question-text">Question text here</h3>
+                        <div class="options" id="options-container">
+                            <!-- Options will be loaded here -->
+                        </div>
+                    </div>
+                    <div class="quiz-controls">
+                        <button class="btn btn-outline" id="prev-question" disabled>Previous</button>
+                        <button class="btn btn-primary" id="next-question">Next</button>
+                        <button class="btn btn-success" id="submit-quiz" style="display: none;">Submit Quiz</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section id="quiz-results" class="section">
+            <div class="container">
+                <div class="results-card">
+                    <h2>Quiz Results</h2>
+                    <div class="score-display">
+                        <div class="score-circle">
+                            <span id="final-score">0</span>
+                            <span class="score-total">/ 100</span>
+                        </div>
+                        <h3 id="score-message">Great job!</h3>
+                    </div>
+                    <div class="results-summary">
+                        <p>Correct Answers: <span id="correct-answers">0</span></p>
+                        <p>Total Questions: <span id="total-questions-result">0</span></p>
+                        <p>Percentage: <span id="percentage">0%</span></p>
+                    </div>
+                    <div class="results-actions">
+                        <button class="btn btn-primary" id="retake-quiz">Retake Quiz</button>
+                        <button class="btn btn-outline" id="back-to-quizzes">Back to Quizzes</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Loading Spinner -->
+    <div class="loading" id="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- Firebase SDK -->
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
+        import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, sendPasswordResetEmail, signOut, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js';
+        import { getFirestore, collection, addDoc, getDocs, doc, updateDoc, deleteDoc } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js';
+
+        // Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyDcbdYXimOSVguNwY8wMjJg0g2ib_XisTM",
+            authDomain: "quiz-gla-087.firebaseapp.com",
+            projectId: "quiz-gla-087",
+            storageBucket: "quiz-gla-087.firebasestorage.app",
+            messagingSenderId: "171276610634",
+            appId: "1:171276610634:web:ff128e3e11928197eccab3",
+            measurementId: "G-VD8BQQZDJ8"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const db = getFirestore(app);
+        const provider = new GoogleAuthProvider();
+
+        // Make Firebase available globally
+        window.firebase = { auth, db, provider, signInWithEmailAndPassword, createUserWithEmailAndPassword, signInWithPopup, sendPasswordResetEmail, signOut, onAuthStateChanged, collection, addDoc, getDocs, doc, updateDoc, deleteDoc };
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
